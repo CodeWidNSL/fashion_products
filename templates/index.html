@@ -12,6 +12,7 @@
            
             Select Product:<br>
             <select name = "product_name">
+                <option value = "Jeans">Select>></option>
                 <option value = "Jeans">Jeans</option>
                 <option value = "Shoes">Shoes</option>
                 <option value = "T-shirt">T-shirt</option>
@@ -20,6 +21,7 @@
             </select><br><br>
             Select Brand:<br>
             <select name = "brand">
+                <option value = "Nike">Select>></option>
                 <option value = "Nike">Nike</option>
                 <option value = "Zara">Zara</option>
                 <option value = "Adidas">Adidas</option>
@@ -28,6 +30,7 @@
             </select><br><br>
             Category:<br>
             <select name = "category">
+                <option value = "Kids' Fashion">Select>></option>
                 <option value = "Kids' Fashion">Kid's</option>
                 <option value = "Women's Fashion">Women's</option>
                 <option value = "Men's Fashion">Men's</option>
@@ -36,13 +39,18 @@
             <input type="text" name="rating" placeholder="Enter Rating"><br><br>
             Size:<br>
             <select name = "size">
-                <option value = "XL">XL</option>
+                <input type="radio" value="XL" name="size">XL
+                <input type="radio" value="L" name="size">L
+                <input type="radio" value="S" name="size">S
+                <input type="radio" value="M" name="size">M
+                <!-- <option value = "XL">XL</option>
                 <option value = "L">L</option>
                 <option value = "S">S</option>
-                <option value = "M">M</option>
+                <option value = "M">M</option> -->
             </select><br><br>
             Color:<br>
             <select name = "color">
+                <option value = "White">Select>></option>
                 <option value = "White">White</option>
                 <option value = "Yellow">Yellow</option>
                 <option value = "Blue">Blue</option>
@@ -54,7 +62,8 @@
         </label>
         <input type = "submit" value="SUBMIT">
 
-        <h4><strong>The price of your Fashion will be <b> {{ prediction }} /- $.</b> Only </strong></h4>
+        <h4><strong>The price of your Fashion will be <b> {{ prediction }}$.</b> Only </strong></h4>
+        <h5>Thank You , Visit again...!</h5>
 
     </form>
     
