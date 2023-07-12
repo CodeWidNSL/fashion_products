@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify({"result":"Successful"})
-    # return render_template('index.html')
+    # return jsonify({"result":"Successful"})
+    return render_template('index.html')
 
 @app.route('/predict_price', methods=['GET','POST'])
 def predict_price():
@@ -30,8 +30,8 @@ def predict_price():
 
         obj = FashionProduct(product_name,brand,category,rating,size,color)
         pred_price = obj.get_predicted_charges()
-        return jsonify({"result":pred_price})
-        # return render_template('index.html', prediction = pred_price)
+        # return jsonify({"result":pred_price})
+        return render_template('index.html', prediction = pred_price)
     except:
         print(traceback.print_exc())
         # return redirect(url_for('home'))
